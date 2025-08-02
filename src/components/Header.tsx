@@ -12,7 +12,7 @@ export const Header: React.FC = () => {
         
         <button className="px-6 py-3 bg-gradient-to-r from-zinc-800 to-zinc-900 dark:from-zinc-700 dark:to-zinc-800 text-white rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center space-x-2">
           <Download className="w-4 h-4" />
-          <span>Download</span>
+          <span>Download App</span>
         </button>
       </nav>
     </header>

@@ -25,12 +25,18 @@ export const Hero: React.FC = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="px-8 py-4 bg-gradient-to-r from-zinc-800 to-zinc-900 dark:from-zinc-700 dark:to-zinc-800 text-white rounded-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center space-x-2 text-lg font-semibold">
+          <button 
+            className="px-8 py-4 bg-gradient-to-r from-zinc-800 to-zinc-900 dark:from-zinc-700 dark:to-zinc-800 text-white rounded-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center space-x-2 text-lg font-semibold"
+            aria-label="Get started with Plune.app for free"
+          >
             <span>Get Started Free</span>
             <ArrowRight className="w-5 h-5" />
           </button>
           
-          <button className="px-8 py-4 bg-white/10 dark:bg-zinc-800/30 backdrop-blur-md text-zinc-900 dark:text-zinc-100 rounded-lg border border-white/20 dark:border-zinc-700/50 hover:bg-white/20 dark:hover:bg-zinc-800/50 transition-all duration-300 text-lg font-semibold">
+          <button 
+            className="px-8 py-4 bg-white/10 dark:bg-zinc-800/30 backdrop-blur-md text-zinc-900 dark:text-zinc-100 rounded-lg border border-white/20 dark:border-zinc-700/50 hover:bg-white/20 dark:hover:bg-zinc-800/50 transition-all duration-300 text-lg font-semibold"
+            aria-label="Watch Plune.app demo video"
+          >
             Watch Demo
           </button>
         </div>
