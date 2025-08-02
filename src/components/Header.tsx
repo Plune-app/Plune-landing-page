@@ -10,9 +10,12 @@ export const Header: React.FC<HeaderProps> = ({ onDownloadsClick }) => {
   return (
     <header className="relative z-10 w-full px-6 py-8">
       <nav className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-start space-x-2">
+        <div className="flex flex-col space-y-2 lg:flex-row items-start space-x-2">
+          <main className='flex items-center gap-4 lg:gap-2'>
           <div className="w-8 h-8 bg-gradient-to-br from-zinc-500 to-zinc-700 dark:from-zinc-400 dark:to-zinc-600 rounded-lg"></div>
           <span className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">Plune.app</span>
+
+          </main>
 
           <Tooltip>
             <TooltipTrigger >
