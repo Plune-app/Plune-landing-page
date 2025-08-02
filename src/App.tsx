@@ -6,6 +6,7 @@ import { Hero } from './components/Hero';
 import { Pricing } from './components/Pricing';
 import { CTA } from './components/CTA';
 import { Footer } from './components/Footer';
+import { Demo } from './components/Demo';
 
 function App() {
   return (
@@ -17,11 +18,12 @@ function App() {
           <div className="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-to-br from-zinc-200/30 to-transparent dark:from-zinc-800/30 dark:to-transparent rounded-full blur-3xl"></div>
           <div className="absolute -bottom-1/2 -left-1/2 w-full h-full bg-gradient-to-tr from-zinc-300/20 to-transparent dark:from-zinc-700/20 dark:to-transparent rounded-full blur-3xl"></div>
         </div>
-        
+
         <ThemeToggle />
         <Header />
         <Hero />
         <CTA />
+        <Demo />
         <Pricing />
         <Footer />
       </div>
