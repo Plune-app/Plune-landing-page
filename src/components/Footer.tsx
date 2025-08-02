@@ -1,3 +1,4 @@
+import { Github } from 'lucide-react';
 import React from 'react';
 
 export const Footer: React.FC = () => {
@@ -7,8 +8,20 @@ export const Footer: React.FC = () => {
         <div className="flex items-center space-x-2 mb-4 md:mb-0">
           <div className="w-6 h-6 bg-gradient-to-br from-zinc-500 to-zinc-700 dark:from-zinc-400 dark:to-zinc-600 rounded-lg"></div>
           <span className="text-lg font-bold text-zinc-900 dark:text-zinc-100">Plune.app</span>
+          <div className="flex items-center space-x-2 text-sm text-zinc-600 dark:text-zinc-400">
+            <span>by</span>
+            <a
+              href="https://github.com/LuscaCid"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-1 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+            >
+              <Github className="w-4 h-4" />
+              <span>Lucas Cid</span>
+            </a>
+          </div>
         </div>
-        
+
         <div className="flex items-center space-x-8 text-sm text-zinc-600 dark:text-zinc-400">
           <a href="#" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
             Privacy Policy
@@ -21,7 +34,6 @@ export const Footer: React.FC = () => {
           </a>
         </div>
       </div>
-      
       <div className="mt-8 text-center text-sm text-zinc-500 dark:text-zinc-500">
         © 2025 Plune.app. All rights reserved.
       </div>
