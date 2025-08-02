@@ -5,10 +5,10 @@ import { ThemeToggle } from './components/ThemeToggle';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Features } from './components/Features';
-import { Demo } from './components/Demo';
 import { Pricing } from './components/Pricing';
 import { Footer } from './components/Footer';
 import { Downloads } from './components/Downloads';
+import { Demo } from './components/Demo';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<'home' | 'downloads'>('home');

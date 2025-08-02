@@ -116,13 +116,13 @@ export const Downloads: React.FC<DownloadsProps> = ({ onBack }) => {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-zinc-600 dark:text-zinc-400">
             <div>
-              <strong className="text-zinc-900 dark:text-zinc-100">OS:</strong> Windows 10 or later (64-bit)
+              <strong className="text-zinc-900 dark:text-zinc-100">OS:</strong> Windows 8 or later (64-bit)
             </div>
             <div>
-              <strong className="text-zinc-900 dark:text-zinc-100">RAM:</strong> 4 GB minimum, 8 GB recommended
+              <strong className="text-zinc-900 dark:text-zinc-100">RAM:</strong> 2 GB minimum, 6 GB recommended
             </div>
             <div>
-              <strong className="text-zinc-900 dark:text-zinc-100">Storage:</strong> 500 MB available space
+              <strong className="text-zinc-900 dark:text-zinc-100">Storage:</strong> 200 MB available space
             </div>
           </div>
         </div>
