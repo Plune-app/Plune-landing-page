@@ -1,10 +1,8 @@
-import React from 'react';
 import { SEOHead } from './components/SEOHead';
 import { ThemeProvider } from './components/ThemeProvider';
 import { ThemeToggle } from './components/ThemeToggle';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
-import { Features } from './components/Features';
 import { Pricing } from './components/Pricing';
 import { CTA } from './components/CTA';
 import { Footer } from './components/Footer';
@@ -23,9 +21,8 @@ function App() {
         <ThemeToggle />
         <Header />
         <Hero />
-        <Features />
-        <Pricing />
         <CTA />
+        <Pricing />
         <Footer />
       </div>
     </ThemeProvider>
