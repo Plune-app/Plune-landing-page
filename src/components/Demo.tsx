@@ -1,29 +1,59 @@
 import React from 'react';
-import { Image, LucideIcon, Monitor, Play } from 'lucide-react';
+import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
+import Plune1 from "../assets/plune-1.png";
+import Plune2 from "../assets/plune-2.png";
+import Plune3 from "../assets/plune-3.png";
+import Plune4 from "../assets/plune-4.png";
+import Plune5 from "../assets/plune-5.png";
+import Plune6 from "../assets/plune-6.png";
+import PluneVideo from "../assets/plune-show-video.mp4"
+import Autoplay from "embla-carousel-autoplay"
 
+const carouselImages: { title: string, image: string }[] = [
+  {
+    image: Plune1,
+    title: "Manage flow diagrams"
+  },
+  {
+    image: Plune3,
+    title: "Create no-code forms"
+  },
+  {
+    image: Plune2,
+    title: "Choose theme u prefer"
+  },
+  {
+    image: Plune4,
+    title: "Detailed field properties"
+  },
+  {
+    image: Plune5,
+    title: "Manage organizations"
+  },
+  {
+    image: Plune6,
+    title: "Set colaborators roles"
+  },
+];
 interface FeatureCardProps {
   title: string;
-  Icon: LucideIcon;
-  gradientFrom: string;
-  gradientTo: string;
+  img: string;
 }
 
-export const FeatureCard: React.FC<FeatureCardProps> = ({ title, Icon, gradientFrom, gradientTo }) => {
+export const FeatureCard: React.FC<FeatureCardProps> = ({ title, img }) => {
   return (
-    <div className="group">
+    <div className="group w-full">
       <h4 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-4 text-center">
         {title}
       </h4>
       <div className="bg-white/10 dark:bg-zinc-800/30 backdrop-blur-md rounded-2xl border border-white/20 dark:border-zinc-700/50 overflow-hidden hover:bg-white/20 dark:hover:bg-zinc-800/50 transition-all duration-300 hover:scale-105">
         <div className="aspect-video flex items-center justify-center bg-gradient-to-br from-zinc-200/30 to-zinc-300/30 dark:from-zinc-800/30 dark:to-zinc-700/30">
-          <div className="text-center">
-            <div
-              className={`w-16 h-16 bg-gradient-to-br ${gradientFrom} ${gradientTo} rounded-xl flex items-center justify-center mb-3 mx-auto group-hover:scale-110 transition-transform duration-300`}
-            >
-              <Icon className="w-8 h-8 text-zinc-700 dark:text-zinc-300" />
-            </div>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">Screenshot placeholder</p>
+          <div
+            className={`w-full h-full object-contain bg-gradient-to-br rounded-xl flex items-center justify-center  mx-auto group-hover:scale-105 transition-transform duration-300`}
+          >
+            <img src={img} alt={title} />
           </div>
+
         </div>
       </div>
     </div>
@@ -31,6 +61,9 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({ title, Icon, gradientF
 };
 
 export const Demo: React.FC = () => {
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  )
   return (
     <section className="relative z-10 max-w-7xl mx-auto px-6 py-20">
       <div className="text-center mb-16">
@@ -52,59 +85,34 @@ export const Demo: React.FC = () => {
             Product Demo Video
           </h3>
           <div className="relative group bg-white/10 dark:bg-zinc-800/30 backdrop-blur-md rounded-2xl border border-white/20 dark:border-zinc-700/50 overflow-hidden hover:bg-white/20 dark:hover:bg-zinc-800/50 transition-all duration-300">
-            <div className="aspect-video flex items-center justify-center bg-gradient-to-br from-zinc-200/30 to-zinc-300/30 dark:from-zinc-800/30 dark:to-zinc-700/30">
+            <div className=" flex items-center justify-center bg-gradient-to-br from-zinc-200/30 to-zinc-300/30 dark:from-zinc-800/30 dark:to-zinc-700/30">
               <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-zinc-500/20 to-zinc-600/20 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <Play className="w-10 h-10 text-zinc-700 dark:text-zinc-300 ml-1" />
+                <div className="w-full bg-gradient-to-br from-zinc-500/20 to-zinc-600/20 rounded-full flex items-center justify-center  mx-auto">
+                <video autoPlay muted controls className='h-full w-full'>
+                  <source src={PluneVideo} type='video/mp4'/>
+                </video>
                 </div>
-                <p className="text-zinc-600 dark:text-zinc-400 font-medium">
-                  Demo video will be added here
-                </p>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div >
 
       {/* Screenshots Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <FeatureCard
-          title="Organization Management"
-          Icon={Monitor}
-          gradientFrom="from-blue-500/20"
-          gradientTo="to-cyan-500/20"
-        />
-        <FeatureCard
-          title="Form Builder Interface"
-          Icon={Image}
-          gradientFrom="from-green-500/20"
-          gradientTo="to-emerald-500/20"
-        />
-        <FeatureCard
-          title="Visual Workflow Designer"
-          Icon={Monitor}
-          gradientFrom="from-purple-500/20"
-          gradientTo="to-pink-500/20"
-        />
-        <FeatureCard
-          title="Advanced Form Controls"
-          Icon={Image}
-          gradientFrom="from-yellow-500/20"
-          gradientTo="to-orange-500/20"
-        />
-        <FeatureCard
-          title="Forms Management Dashboard"
-          Icon={Monitor}
-          gradientFrom="from-indigo-500/20"
-          gradientTo="to-blue-500/20"
-        />
-          <FeatureCard
-            title="Conditional Logic Builder"
-            Icon={Image}
-            gradientFrom="from-red-500/20"
-            gradientTo="to-rose-500/20"
-          />
-      </div>
+      <Carousel
+        plugins={[plugin.current]}
+        className="w-full "
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.reset}
+      >
+        <CarouselContent>
+          {carouselImages.map((img, idx) => (
+            <CarouselItem key={idx}>
+              <FeatureCard img={img.image} title={img.title} />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
     </section>
   );
 };
