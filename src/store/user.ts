@@ -20,7 +20,7 @@ export const useUserStore = create<UserState>()(
       clearUser: () => set({ user: null }),
     }),
     {
-      name: 'user-store', // nome da chave no localStorage
+      name: "@plune.app-user-store", // nome da chave no localStorage
     }
   )
 );

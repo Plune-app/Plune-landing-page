@@ -14,6 +14,7 @@ import { api } from "@/service/api";
 import { footerItems } from "@/lib/sidebar-nav";
 import { OrganizationSwitcher } from "./OrganizationSwitcher";
 import { NativeUserDropdown } from "./UserDropdown";
+
 export function OrganizationSidebar() {
   const { data, isLoading, isError } = useQuery({
     queryFn: async () => {
