@@ -29,9 +29,7 @@ export function OrganizationSwitcher() {
     queryFn: getUserOrganizations,
   });
 
-  if (!selectedOrganization) {
-    return null
-  }
+
   return (
     <SidebarMenu>
       <SidebarMenuItem>
@@ -48,8 +46,8 @@ export function OrganizationSwitcher() {
                 </Avatar>
               </div>
               <div className="grid flex-1 text-left text-sm leading-tight">
-                <span className="truncate font-medium">{selectedOrganization.name}</span>
-                <span className="truncate text-xs">{selectedOrganization.role}</span>
+                <span className="truncate font-medium">{selectedOrganization ? selectedOrganization.name: ""}</span>
+                <span className="truncate text-xs">{selectedOrganization ? selectedOrganization.role: ""}</span>
               </div>
               <ChevronsUpDown className="ml-auto" />
             </SidebarMenuButton>
