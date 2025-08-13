@@ -6,7 +6,6 @@ import Plune3 from "../assets/plune-3.png";
 import Plune4 from "../assets/plune-4.png";
 import Plune5 from "../assets/plune-5.png";
 import Plune6 from "../assets/plune-6.png";
-import PluneVideo from "../assets/plune-show-video.mp4"
 import Autoplay from "embla-carousel-autoplay"
 
 const carouselImages: { title: string, image: string }[] = [
@@ -89,7 +88,7 @@ export const Demo: React.FC = () => {
               <div className="text-center">
                 <div className="w-full bg-gradient-to-br from-zinc-500/20 to-zinc-600/20 rounded-full flex items-center justify-center  mx-auto">
                 <video autoPlay muted controls className='h-full w-full'>
-                  <source src={PluneVideo} type='video/mp4'/>
+                  {/* <source src={PluneVideo} type='video/mp4'/> */}
                 </video>
                 </div>
               </div>
