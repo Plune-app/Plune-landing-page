@@ -7,7 +7,7 @@ export function Router () {
   const user = useUserStore((state) => state.user);
   return (
     <BrowserRouter>   
-      { user ? <OrganizationRouter /> : <PublicRouter /> }
+      { !user ? <OrganizationRouter /> : <PublicRouter /> }
     </BrowserRouter>
   )
 }
