@@ -17,13 +17,12 @@ import {
 } from "@/components/ui/sidebar"
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
 import { useQuery } from "@tanstack/react-query"
-import { useState } from "react"
 import { useUserStore } from "@/store/user"
-import { userOrganizations } from "@/hooks/use-organization"
+import { useOrganizations } from "@/hooks/use-organization"
 
 export function OrganizationSwitcher() {
   const { user, selectedOrganization, setSelectedOrganization } = useUserStore();
-  const { getUserOrganizations } = userOrganizations();
+  const { getUserOrganizations } = useOrganizations();
   const { data: organizations } = useQuery({
     queryKey: ["user-organizations", user?.email],
     queryFn: getUserOrganizations,
