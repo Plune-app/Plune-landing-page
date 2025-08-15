@@ -17,7 +17,6 @@ import {
 } from "@/components/ui/sidebar"
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
 import { useQuery } from "@tanstack/react-query"
-import { useState } from "react"
 import { useUserStore } from "@/store/user"
 import { userOrganizations } from "@/hooks/use-organization"
 
@@ -28,7 +27,6 @@ export function OrganizationSwitcher() {
     queryKey: ["user-organizations", user?.email],
     queryFn: getUserOrganizations,
   });
-
 
   return (
     <SidebarMenu>

@@ -9,7 +9,7 @@ export function Router () {
   console.log(hostname)
   return (
     <BrowserRouter>   
-      { !user ? <OrganizationRouter /> : <PublicRouter /> }
+      { user ? <OrganizationRouter /> : <PublicRouter /> }
     </BrowserRouter>
   )
 }
