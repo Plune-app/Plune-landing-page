@@ -15,6 +15,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import { AppAxiosError, useError } from "@/hooks/use-error";
 import { UserDto, type UserSignInDTO } from "@/lib/DTO/user.dto";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 type KeyofUserSignInDTO = keyof UserSignInDTO
 
 export const SignIn = memo(() => {
@@ -46,13 +49,31 @@ export const SignIn = memo(() => {
   }, [])
   return (
     <Card>
-      <CardHeader>
-        <CardTitle >
-          Login - Plune.app
-        </CardTitle>
-        <CardDescription>
+      <CardHeader className="flex justify-between items-center">
+         <main className="flex flex-col gap-2">
+          <CardTitle>
+            Login - Plune.app
+          </CardTitle>
+          <CardDescription>
           Signin to get start
-        </CardDescription>
+          </CardDescription>
+        </main>
+        <aside>
+          <Tooltip>
+            <TooltipTrigger>
+              <Button
+                variant={"ghost"}
+                size={"icon"}
+                onClick={() => navigate("/")}
+              >
+                <ArrowLeft size={15} />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              Go back to home
+            </TooltipContent>
+          </Tooltip>
+        </aside>
       </CardHeader>
       <CardContent>
         <FormProvider {...methods}>
@@ -77,7 +98,7 @@ export const SignIn = memo(() => {
         </FormProvider>
       </CardContent>
       <CardFooter>
-        <Link to={"/register"} className="text-muted-foreground text-sm hover:underline hover:text-sidebar-accent-foreground">Doesn't have a account? Register now</Link>
+        <Link to={"/signUp"} className="text-muted-foreground text-sm hover:underline hover:text-sidebar-accent-foreground">Doesn't have a account? Register now</Link>
       </CardFooter>
     </Card>
   )

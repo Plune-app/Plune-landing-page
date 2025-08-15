@@ -5,6 +5,7 @@ import { useUserStore } from "@/store/user";
 export function Router () {
   //validar existencia de usuario cliente para usar apenas a aplicação onde é possivel realizar submissoes de formulários
   const user = useUserStore((state) => state.user);
+  
   const hostname = window.location.hostname;
   console.log(hostname)
   return (

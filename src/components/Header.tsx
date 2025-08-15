@@ -32,8 +32,8 @@ export const Header: React.FC = () => {
             onClick={() => navigate("/downloads")}
             className="cursor-pointer px-6 py-3 bg-white/10 dark:bg-zinc-800/30 backdrop-blur-md text-zinc-900 dark:text-zinc-100 rounded-lg border border-white/20 dark:border-zinc-700/50 hover:bg-white/20 dark:hover:bg-zinc-800/50 transition-all w-full lg:w-fit duration-300 flex items-center space-x-2"
           >
-            <ExternalLink className="w-4 h-4" />
             <span>Downloads</span>
+            <ExternalLink className="w-4 h-4" />
           </button>
           <HeaderButton onClick={() => console.log("download latest version for windows")}icon={Download} title='Win' />
           <HeaderButton onClick={() =>navigate("/signIn") }icon={ArrowRight} title='Login' />
