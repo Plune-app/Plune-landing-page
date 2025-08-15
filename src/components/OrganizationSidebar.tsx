@@ -14,8 +14,12 @@ import { api } from "@/service/api";
 import { footerItems } from "@/lib/sidebar-nav";
 import { OrganizationSwitcher } from "./OrganizationSwitcher";
 import { NativeUserDropdown } from "./UserDropdown";
+import { useOrganizations } from "@/hooks/use-organization";
+import { useForm } from "@/hooks/use-form";
 
 export function OrganizationSidebar() {
+  const { getUserOrganizations } = useOrganizations();
+  const { getOrganizationForms } = useForm();
   const { data, isLoading, isError } = useQuery({
     queryFn: async () => {
       //rota validada por token, necessário passar para sempre validar se o usuario que faz requisição faz parte da organização no hostname

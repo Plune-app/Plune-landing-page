@@ -1,5 +1,5 @@
+import { Organization } from "@/@types/Organization";
 import { Roles, User } from "@/@types/user";
-import { Organization } from "@/Organization";
 import { api } from "@/service/api";
 import { useCallback } from "react";
 export interface GetAllowedUsersReturn { 
@@ -14,7 +14,7 @@ export interface UserOrganizationsReturn {
   organization: Organization
   deleted?: boolean;
 }
-export function userOrganizations() {
+export function useOrganizations() {
   const BASE_PATH = "/organizations";
 
   const getUserOrganizations = useCallback(async () => {
